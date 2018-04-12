@@ -1,0 +1,26 @@
+invalid action 'wait' in line 8, ignored
+invalid action 'wait' in line 9, ignored
+id partinvalid format in line 15, ignored
+invalid id 'id_4' in line 18, ignored
+invalid id 'ID3' in line 19, ignored
+invalid action 'restart' in line 22, ignored
+empty command in line 25, ignored
+invalid pipe-id 'id_3' in line 31, ignored
+unknown pipe-id 'id5' in line 34, ignored
+invalid action 'wait' in line 37, ignored
+pipe not allowed for 'respawn' tasks in line 38, ignored
+pipe not allowed for already piped tasks in line 41, ignored
+pipe not allowed for already piped tasks in line 42, ignored
+failed to execute command './TTT': No such file or directory
+'Task5' start (timeout 1)
+'Task5' end
+'Task1' start (timeout 1)
+'Task4' start (timeout 4)
+'Task6' start (timeout 2)
+Got SIGCHLD
+'Task4' end
+'Task6' start (timeout 0)
+'Task6' end
+'Task6' end
+Got SIGCHLD
+'Task4' start (timeout 4)

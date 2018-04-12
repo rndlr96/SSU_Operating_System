@@ -1,0 +1,42 @@
+#
+# This is sample configuration file for OS assignment #1
+#
+
+# normal tasks
+notcmd:once: 7 ::./TTT
+id1:once: 3 ::./task -n Task1 -w Hi -r -t 1
+id2:wait:  :id1:./task -n Task2 -w Hello -r -t 1
+idwait1:wait:  ::./task -n Task3 -t 2
+respawn1 : respawn : 2 : : ./task -n Task4 -t 4
+idonce1:once: 4 ::./task -n Task5 -t 1
+idonce2:once: 1 ::./task -n Task6 -t 2
+
+# invalid format
+i love you
+
+# invalid id
+id_4: :::
+ID3:id1:::
+
+# invalid action
+id4:restart:::
+
+# empty task
+id5:once:::
+
+# duplicate id
+id2:once::id1:./task -n Task6
+
+# invalid pipe-id
+id7:once::id_3:
+
+# unknown pipe-id
+id8:once::id5:./task -n Task8
+
+# 'respawn' tasks are not allowed to pipe
+id9:wait::id3:./task -n Task9
+id10:respawn::id2:./task -n Task10
+
+# already piped tasks are not allowed to pipe
+id11:once::id1:./task -n Task11
+id12:once::id2:./task -n Task12

@@ -1,0 +1,24 @@
+#
+# This is sample input file for OS assignment #2
+#
+P1 0 3 4
+P2 2 6 2
+P3 4 4 1
+P4 6 5 3
+P5 8 2 1
+
+# duplicate process id
+P3 4 4 4
+
+# invalid arrive time
+P6 -1 4 4
+P6 31 4 4
+
+# invalid service time
+P7 0 0 4
+P8 0 60 3
+
+# invalid priority
+P9 9 2 0
+P9 9 2 11
+P9 9 2 -1
